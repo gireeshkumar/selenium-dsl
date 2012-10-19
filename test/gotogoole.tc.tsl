@@ -1,0 +1,3 @@
+open "http://google.co.in" in IE
+run "notepad.exe"
+type "android"

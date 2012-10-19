@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+	<class fqn="com.giri.target.svr.cmd.ClickAlertCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.ClickCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.EqualsAssertionProcessor" />
+	<class fqn="com.giri.target.svr.cmd.GenericHTMLCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.GetFlexVisibleAssertionProcessor" />
+	<class fqn="com.giri.target.svr.cmd.IsAlertVisibleAssertionProcessor" />
+	<class fqn="com.giri.target.svr.cmd.TypeCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.GetCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.OpenCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.ScriptCommandProcessor" />
+	<class fqn="com.giri.target.svr.cmd.SeleniumMethodInvocation"/>
+	<class fqn="com.giri.target.svr.cmd.HasCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.ISCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.RunCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.IncludeCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.KeyCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.ScreenshotCommandProcessor"/>
+	<class fqn="com.giri.target.svr.cmd.GenericFlexCommandProcessor"/>
+</classes>

@@ -1,0 +1,6 @@
+
+
+def data = {key, value -> testcaserunner.data key, value; }
+def datafile = {file -> testcaserunner.datafile file; }
+def runTest = {file -> testcaserunner.runTest file; };
+

@@ -1,0 +1,54 @@
+<dictionary>
+	<keywords>
+		<keyword name="FirstName">
+			<locator>jq=input[id=inpFirstName]</locator>
+		</keyword>
+		<keyword name="LastName">
+			<locator>jq=input[id=inpLastName]</locator>
+		</keyword>
+		<keyword name="Employer">
+			<locator>jq=input[id=inpEmployer]</locator>
+		</keyword>
+		<keyword name="Title">
+			<locator>jq=input[id=inpTitle]</locator>
+		</keyword>
+		<keyword name="JobFunction">
+			<locator>jq=input[id=inpJobFunction]</locator>
+		</keyword>
+		<keyword name="CRD">
+			<locator>jq=input[id=inpCRD]</locator>
+		</keyword>
+		<keyword name="Work_Email_Address">
+			<locator>jq=input[id=inpWorkEMail]</locator>
+		</keyword>
+		<keyword name="Work_Physical_Address">
+			<locator>jq=input[id=inpUserAddress]</locator>
+		</keyword>
+		<keyword name="Work_Telephone_Number">
+			<locator>jq=input[id=inpUserTelephone]</locator>
+		</keyword>
+		<keyword name="Work_Fax_Number">
+			<locator>jq=input[id=inpUserAddress]</locator>
+		</keyword>
+		<keyword name="Personal_Email">
+			<locator>jq=input[id=inpUserEMail]</locator>
+		</keyword>
+		<keyword name="Home_Address">
+			<locator>jq=input[id=inpHomeAddress]</locator>
+		</keyword>
+		<keyword name="Cell_Phone">
+			<locator>jq=input[id=inpCellphone]</locator>
+		</keyword>
+		<keyword name="Cancel">
+			<locator>jq=#userCancelButton</locator>
+		</keyword>
+		<keyword name="Save">
+			<locator>jq=#btnSaveUser</locator>
+		</keyword>
+	</keywords>
+	<items>
+		<item name="waitfor1minute">
+			<command command="sleep" args="6000"/>
+		</item>
+	</items>
+</dictionary>

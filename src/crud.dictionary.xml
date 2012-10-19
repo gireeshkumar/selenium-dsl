@@ -1,0 +1,17 @@
+<dictionary>
+	<keywords>
+		<!-- override or append new keywords here -->
+		<keyword name="Advanced_Search">
+			<locator>jq=a:contains('Advanced Search')</locator>
+		</keyword>
+		<keyword name="CompanyName">
+			<locator>jq=input[id=inpCompanyName]</locator>
+		</keyword>
+	</keywords>
+	<items>
+		<item name="waitfor1minute">
+			<command command="sleep" args="6000"/>
+		</item>
+		
+	</items>
+</dictionary>

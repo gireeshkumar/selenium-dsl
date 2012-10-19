@@ -1,0 +1,44 @@
+<!--
+Project Dictionary - Sample content-
+ <dictionary>
+ 
+ 	<inclide source="mapping.xml"/>
+ 	<inclide source="customcommands1.xml"/>
+  
+	<keywords>
+		- override or append new keywords here -
+		<keyword name="News">
+			<locator>jq=a:contains('News')</locator>
+		</keyword>
+		- using regular expression - to check html tag text 
+		- checkes for google result count tab display
+		<keyword>		
+		<keyword>
+			<locators>
+				resultcount = jq=:jq=:regexVal('^About[0-9, ]+results')
+			</locators>
+		</keyword>
+		
+	</keywords>
+	<items>
+		-  dictionary items -
+		<item name="gotogoogle">
+			<command command="open" args="${test.url}, ${browser.type}"/>
+		</item>		
+	</items>
+</dictionary>
+ -->
+<dictionary>
+	 <flexapp name="_flexcalc" locator="FlexCalculator"/>
+	<keywords>
+		<keyword>
+			<locators>
+				resultcount = jq=:jq=:regexVal('^About[0-9, ]+results')
+			</locators>
+		</keyword>
+	</keywords>
+
+	<items>
+
+	</items>
+</dictionary>

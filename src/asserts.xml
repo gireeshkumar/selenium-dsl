@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<assertion>
+		  <command>getFlexVisible</command>
+		  <locator><![CDATA[ <locator>]]></locator>
+		  <display>Is Flex Component Visible</display>
+		  <help>
+		    <helpString><![CDATA[ Check the visibility of the flex component, expected , true (visible), false (hidden) ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</assertion>
+</list>

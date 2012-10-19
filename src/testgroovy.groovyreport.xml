@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestReports>
+  <TestReport source="D:\dev\automation\Project_TARGET\src\testgroovy.groovy" testCaseName="not available" testCaseDesc="not available" status="SUCCESS">
+    <date value="1307522746421">Jun 8, 2011 2:15:46 PM</date>
+    <elapsedTime>0.0:0.0:0.0</elapsedTime>
+    <numberOfCommands>0</numberOfCommands>
+    <numberOfAssertions>0</numberOfAssertions>
+  </TestReport>
+</TestReports>
+

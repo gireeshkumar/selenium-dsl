@@ -1,0 +1,162 @@
+<metadata>
+	<keywords>
+
+		<keyword name="CHROME" implementation="com.giri.target.dsl.keywords.html.KeywordChrome" />
+		<keyword name="IE" implementation="com.giri.target.dsl.keywords.html.KeywordIE" />
+		<keyword name="FIREFOX"
+			implementation="com.giri.target.dsl.keywords.html.KeywordFirefox" />
+		<keyword name="SAFARI"
+			implementation="com.giri.target.dsl.keywords.html.KeywordSafari" />
+
+		<keyword name="BUTTON"
+			implementation="com.giri.target.dsl.keywords.html.KeywordButton" />
+		<keyword name="TEXTBOX"
+			implementation="com.giri.target.dsl.keywords.html.KeywordTextBox" />
+		<keyword name="LINK" implementation="com.giri.target.dsl.keywords.html.KeywordLink" />
+		<!-- <keyword name="_flex" implementation="com.giri.target.dsl.keywords.KeywordFlex"/> -->
+
+
+		<keyword name="close" implementation="com.giri.target.dsl.keywords.KeywordClose" />
+		<keyword name="open" implementation="com.giri.target.dsl.keywords.KeywordOpen" />
+		<keyword name="click" implementation="com.giri.target.dsl.keywords.KeywordClick" />
+		<keyword name="type" implementation="com.giri.target.dsl.keywords.KeywordType" />
+		<keyword name="wait" implementation="com.giri.target.dsl.keywords.KeywordWait" />
+		<keyword name="selectrow" implementation="com.giri.target.dsl.keywords.SelectRowKeyword" />
+		<keyword name="has" implementation="com.giri.target.dsl.keywords.KeywordHas" />
+		<keyword name="is" implementation="com.giri.target.dsl.keywords.KeywordIS" />
+		<keyword name="run" implementation="com.giri.target.dsl.keywords.KeywordRun" />
+		<keyword name="include" implementation="com.giri.target.dsl.keywords.KeywordInclude" />
+		<keyword name="key" implementation="com.giri.target.dsl.keywords.KeywordKey" />
+		<keyword name="screenshot" implementation="com.giri.target.dsl.keywords.KeywordScreenshot"/>
+		
+		
+
+		<!-- custom key words should exactly match with the command, you cannot 
+			have 'verifyuser' keyword map to 'verify user' statement, use "item" tag 
+			for the same Keywords doesn't support nested TSL commands, use 'item' tag 
+			for the same - - - keywords tag supports - - - implementation attribute - 
+			Fully Qualified class for keyword extends 'com.giri.target.dsl.keywords.BaseActionKeyword' 
+			Script tag with any script type supported by this framework, like 'groovy', 
+			'JQ' (JQuery), 'JS' (JavaScript) Groovy script execution in keyword will 
+			have below listed context objects command - instance of - com.giri.target.ifc.ICommand 
+			testRunner - instance of - com.giri.target.svr.SeleniumTestRunner selenium 
+			- instance of - com.giri.target.svr.GSelenium (extends - com.thoughtworks.selenium.DefaultSelenium) 
+			driver - instance of - net.sourceforge.seleniumflexapi.cal.TARGetPageDriver 
+			(extends - net.sourceforge.seleniumflexapi.cal.DefaultPageDriver) testDataStore 
+			- instance of - com.giri.target.svr.TestDataStore 'locator' tag, help to 
+			locate elements in HTML/Flex/Silverlight, 'data' tag, to support custom data 
+			values. -->
+
+	</keywords>
+	<ignored>
+		for,in,on,at,as,with,into
+	</ignored>
+	<items>
+	<!-- 
+	
+	
+	Sample JQuery script with forloop
+	// the JQuery function should return "true" for SUCCESS and "false" for "FAIL" (Boolean, true/false, not string)
+	// wrap the code insize (function(){ <code here with 'return' value> })()
+	<item name="haslink">
+			<assertion label="Verify link existance" command="equals"
+				expectedValue="true" message="Link not found">
+				<actualValue>
+					<script type="JQ" target="client"><![CDATA[
+						(function(){
+						  var found = null;
+						  $( document ).find("a").each(function (i) {     
+								 if(this.text=='${param0}'){
+									found = this;
+									return false;
+								}
+							});
+						 	return found != null;
+						})()
+					 ]]></script>
+				</actualValue>
+			</assertion>
+		</item>
+	 -->
+	<!--
+	Upload file
+	usage : upload "locator" "file path" 
+	
+	  9947449909
+	
+	 -->
+	<item name="upload">
+		<script type="groovy" target="server"><![CDATA[
+			if(stmt.getParameters() == null || stmt.getParameters().length == 0){
+			  throw new RuntimeException("Provide File location to upload");
+			}
+		 	driver.findElement(driver, utils.findLocatorString(stmt)).sendKeys(stmt.getParameters()[0].value());
+		 ]]></script>
+	</item>
+	
+		<!-- verify alert "Please input your name" -->
+		<item name="verifyalert">
+			<assertion label="Verify alert content" command="equals"
+				expectedValue="true" message="Alert verification failed">
+				<actualValue>
+					<script type="groovy" target="server"><![CDATA[
+					 	"${param0}".toLowerCase() == selenium.getAlert().toLowerCase()
+					 ]]></script>
+				</actualValue>
+			</assertion>
+		</item>
+
+		<item name="verifytitle">
+			<assertion label="Verify browser title" command="equals"
+				expectedValue="${param0}" message="Browser title verification failed">
+				<actualValue>
+					<script type="JQ" target="client"><![CDATA[
+					 	$(document).attr('title')
+					 ]]></script>
+				</actualValue>
+			</assertion>
+		</item>
+		
+		<item name="haslink">
+			<assertion label="Verify link existance" command="equals"
+				expectedValue="true" message="Link not found">
+				<actualValue>
+					<script type="JQ" target="client"><![CDATA[
+						(function(){
+						
+						  var found = null;
+						  $( document ).find("a").each(function() {     
+								 if($(this).text() == '${param0}'){
+									found = this;
+									return false;
+								}
+							});
+						 	return found != null;
+						 	
+						})()
+					 ]]></script>
+				</actualValue>
+			</assertion>
+		</item>
+
+
+		<item name="jquery">
+			<script type="JQ" target="client"><![CDATA[
+			 	${param0}
+			 ]]></script>
+		</item>
+
+		<!-- jscript "alert('hi')" -->
+
+		<item name="jscript">
+			<script type="JS" target="client"><![CDATA[
+			 	${param0}
+			 ]]></script>
+		</item>
+		<item name="groovy">
+			<script type="groovy" target="server"><![CDATA[
+			 	${param0}
+			 ]]></script>
+		</item>
+	</items>
+</metadata>

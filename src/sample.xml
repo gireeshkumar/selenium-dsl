@@ -1,0 +1,55 @@
+<dictionary>
+	 <flexapp name="_flexv1" locator="VideoPlayerSimple"/>
+	<keywords>
+		<keyword>
+			<locators>
+				resultcount = jq=:jq=:regexVal('^About[0-9, ]+results')
+			</locators>
+		</keyword>
+	</keywords>
+
+	<items>
+
+		
+		<item name="video" type="tsl">
+			${param1} doFlexInvoke "videoPlayer" "${param0}"
+		</item>
+	
+        <item name="watchAd">
+        
+          <script type="AS3" target="client" 
+				thread="true" result="vpadflag${param0}"  assert="(vpadflag${param0} == 'true')"
+				name="Assert Ads placement '${param2}'">
+		  <![CDATA[
+			 	var videoPlayer = GAS3Bridge.getFlexElement("videoPlayer");               
+				var fn = function(event):void{
+					if(event.time >= ${param0} && event.time < ${param1}){
+						
+                        // check if popup visible
+						if(videoPlayer.messagePanel.visible){
+    
+                            var flg:Boolean = (videoPlayer.messagePanel.message == "${param2}");
+                            videoPlayer.internalVP.removeEventListener("currentTimeChange",fn);
+                            
+                            
+                            testContext.vpadflag${param0} = flg;
+                        }
+						
+					}
+				};
+				videoPlayer.internalVP.addEventListener("currentTimeChange", fn);
+			 ]]></script>
+        
+        </item>
+
+
+ <item name="script0">
+        
+          <script type="AS3" target="client"><![CDATA[
+			 	 Alert.show("Hello");
+			 ]]></script>
+        
+        </item>
+
+	</items>
+</dictionary>

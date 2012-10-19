@@ -1,0 +1,68 @@
+<dictionary>
+	<keywords>
+		<!-- override or append new keywords here -->
+		<keyword name="Advanced_Search">
+			<locator>jq=a:contains('Advanced Search')</locator>
+		</keyword>
+		<keyword name="search_box">
+			<locator>jq=input[name=q]</locator>
+		</keyword>
+		<keyword name="Google_Search">
+			<locator>jq=input[name=btnG]</locator>
+		</keyword>
+		<keyword name="News">
+			<locator>jq=a:contains('News')</locator>
+		</keyword>
+		<keyword name="search_keyword">
+			<data>${test.keyword}</data>
+		</keyword>
+		
+	</keywords>
+	<items>
+		<!--  dictionary items -->
+		<item name="gotogoogle">
+			<command command="open" args="${test.url}, ${browser.type}"/>
+		</item>
+		<!--
+			If item matches the full text of statement , 
+			then the outcome of this script execution should be "true/false" or Java exception 
+		 -->
+		<item name='titleshouldcontainthatsearchkeyword'>
+			<script type="JQ" target="client"><![CDATA[
+				($(${doc}).attr('title').indexOf("${test.keyword}") != -1)
+			 ]]></script> 
+		</item>
+		<item name="waitfor1minute">
+			<command command="sleep" args="6000"/>
+		</item>
+		
+		<!--  SearchFor keyword using direct jquery -->
+		<!-- 
+		<item name='searchfor'>
+			<script type="JQ" target="client"><![CDATA[
+				$(${doc}).find("input[name=q]").val('${param0}');
+				$(${doc}).find("input[name=btnG]").trigger('click');
+				true;
+			 ]]></script> 
+		</item>
+		 -->
+		 
+		 <!--  SearchFor keyword using TARGet xml commands -->
+		
+		<item name='searchusingasearchkeyword'>
+			<command command="type" locator="jq=input[name=q]" args="${test.keyword}"/>
+			<command command="click" locator="jq=input[name=btnK]"/>
+		</item>		
+		<item name='ThisisaFlexapplication'>
+			<context isFlex="true" isEnsureVisible="true" flexAppName="${param0}" />
+		</item>	
+		<item name='Flexapplication,'>
+			<context isFlex="true" isEnsureVisible="true" flexAppName="${param0}" />
+		</item>	
+		<item name='isactiveandnotclickable'>
+			<script type="JQ" target="client"><![CDATA[
+				$(${doc}).find(":anyTagContains('${param0}')")!= null
+			 ]]></script>
+		</item>
+	</items>
+</dictionary>

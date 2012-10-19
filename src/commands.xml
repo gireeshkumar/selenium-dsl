@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<!--
+		String display,String command, String locator, String args, Help help
+	-->
+	<!--
+		<command> <command>doFlexClick</command> <locator>&lt;object
+		id&gt;</locator> <args>&lt;label - optional&gt;</args>
+		<ensureVisible>true</ensureVisible> <display>Flex Click</display>
+		<help> <helpString>Click on Flex components, Provide Flex component
+		&apos;id&apos; and label (&apos;for tabs&apos;)</helpString> </help>
+		<isFlex>true</isFlex> </command>
+	-->
+	<command>
+		<command>click</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Click</display>
+		<help>
+			<helpString><![CDATA[ Fire a mouse click event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>doubleClick</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Double Click</display>
+		<help>
+			<helpString><![CDATA[ Fire a mouse double click event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>fireEvent</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Fire Event</display>
+		<help>
+			<helpString><![CDATA[ Fire an DOM event using the given event name on the object )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>focus</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Focus</display>
+		<help>
+			<helpString><![CDATA[ Fire an Focus event )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>keyPress</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Key Press</display>
+		<help>
+			<helpString><![CDATA[ Fire an Key Press event  )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>keyDown</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Key Down</display>
+		<help>
+			<helpString><![CDATA[ Fire an Key Down event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>keyUp</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Key Up</display>
+		<help>
+			<helpString><![CDATA[ Fire an key Up event]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>mouseOver</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Mouse Over</display>
+		<help>
+			<helpString><![CDATA[ Fire an Mouse Over event )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>mouseOut</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Mouse Out</display>
+		<help>
+			<helpString><![CDATA[ Fire an Mouse Out event  )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>mouseDown</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Mouse Down</display>
+		<help>
+			<helpString><![CDATA[ Fire an Mouse Down event )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>mouseUp</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Mouse Up</display>
+		<help>
+			<helpString><![CDATA[ Fire an Mouse Up event )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>type</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Type</display>
+		<help>
+			<helpString><![CDATA[ Fire an Type event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>check</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Check</display>
+		<help>
+			<helpString><![CDATA[ Fire an Check event using the given event name on the object )]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>uncheck</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Un Check</display>
+		<help>
+			<helpString><![CDATA[ Fire an Un Check event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		<command>select</command>
+		<locator><![CDATA[ <locator>]]></locator>
+		<args><![CDATA[ <event name>]]></args>
+		<display>Select</display>
+		<help>
+			<helpString><![CDATA[ Fire an select event ]]></helpString>
+		</help>
+		<isFlex>false</isFlex>
+	</command>
+	<command>
+		  <command>doFlexClick</command>
+		  <locator><![CDATA[ <locator>]]></locator>
+		  <args><![CDATA[<optionalButtonLabel>]]></args>
+		  <display>Flex Click</display>
+		  <help>
+		    <helpString><![CDATA[ Mouse click event ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	<command>
+		  <command>getFlexVisible</command>
+		  <locator><![CDATA[ <locator>]]></locator>
+		  <args></args>
+		  <display>Flex Visible</display>
+		  <help>
+		    <helpString><![CDATA[ Returns Display object visibility ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	<command>
+		  <command>getFlexEnabled</command>
+		  <locator><![CDATA[ <locator>]]></locator>
+		  <args>></args>
+		  <display>Flex Enabled</display>
+		  <help>
+		    <helpString><![CDATA[ Returns Display object enabled or not )]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	<command>
+		  <command>doFlexSelect</command>
+		  <locator><![CDATA[ <selectionFieldId>]]></locator>
+		  <args><![CDATA[<itemToSelect>]]></args>
+		  <display>Flex Select</display>
+		  <help>
+		    <helpString><![CDATA[ Identifies selected display item]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>doFlexSelectIndex</command>
+		  <locator><![CDATA[ <selectionFieldId>]]></locator>
+		  <args><![CDATA[ <index>]]></args>
+		  <display>Flex Select Index</display>
+		  <help>
+		    <helpString><![CDATA[ Identifies selected index of the display object]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	
+	<command>
+		  <command>getFlexDataGridCell</command>
+		  <locator><![CDATA[ <dataGridId>]]></locator>
+		  <args><![CDATA[ <row & column>]]></args>
+		  <display>Key Down</display>
+		  <help>
+		    <helpString><![CDATA[To get particular cell in FlexDataGrid ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	<command>
+		  <command>doFlexCheckBox</command>
+		  <locator><![CDATA[ <checkBoxId>]]></locator>
+		  <args><![CDATA[ <value>]]></args>
+		  <display>Flex CheckBox</display>
+		  <help>
+		    <helpString><![CDATA[ To select or deselect flex checkbox]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	<command>
+		  <command>isCheckboxChecked</command>
+		  <locator><![CDATA[ <checkBoxId>]]></locator>
+		  <args></args>
+		  <display>Flex IsCheckboxChecked</display>
+		  <help>
+		    <helpString><![CDATA[ To check whether flex checkbox is selected]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	<command>
+		  <command>getFlexSelection</command>
+		  <locator><![CDATA[ <comboBoxId>]]></locator>
+		  <args></args>
+		  <display>Flex ComboBox Selected Item</display>
+		  <help>
+		    <helpString><![CDATA[ To get Flex ComboBox Selected Item]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	
+	
+	<command>
+		  <command>doFlexSetFocus</command>
+		  <locator><![CDATA[ <widgetId>]]></locator>
+		  <args></args>
+		  <display>Flex SetFocus</display>
+		  <help>
+		    <helpString><![CDATA[ To set focus on particular display object]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	
+	<command>
+		  <command>getFlexProperty</command>
+		  <locator><![CDATA[ <locator>]]></locator>
+		  <args><![CDATA[ <property>]]></args>
+		  <display>Get Flex Property</display>
+		  <help>
+		    <helpString><![CDATA[ To get flex property details of a particular display object]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	<command>
+		  <command>getFlexText</command>
+		  <locator><![CDATA[ <textFieldId>]]></locator>
+		  <args></args>
+		  <display>Get Flex Text</display>
+		  <help>
+		    <helpString><![CDATA[ To get text value of flex text field]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	<command>
+		  <command>doFlexSelectComboByLabel</command>
+		  <locator><![CDATA[ <selectionFieldId>]]></locator>
+		  <args><![CDATA[ <itemToSelect>]]></args>
+		  <display>Flex Select Combo By Label</display>
+		  <help>
+		    <helpString><![CDATA[ to select Flex Combo By Label value ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	
+	
+	<command>
+		  <command>getFlexDataGridRowCount</command>
+		  <locator><![CDATA[ <dataGridId>]]></locator>
+		  <args></args>
+		  <display>Flex DataGrid RowCount</display>
+		  <help>
+		    <helpString><![CDATA[To get Flex DataGrid RowCount]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>getFlexAlertPresent</command>
+		  <locator></locator>
+		  <args></args>
+		  <display>Get Flex Alert Present</display>
+		  <help>
+		    <helpString><![CDATA[ to check whether FlexAlert Present]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>doFlexAlertResponse</command>
+		  <locator><![CDATA[ <alertButton>]]></locator>
+		  <args></args>
+		  <display>Do Flex Alert Response</display>
+		  <help>
+		    <helpString><![CDATA[ Do Flex Alert Response ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>doFlexType</command>
+		  <locator><![CDATA[ <textField>]]></locator>
+		  <args><![CDATA[ <text>]]></args>
+		  <display>do Flex Type</display>
+		  <help>
+		    <helpString><![CDATA[ To watch typing on flex trext field]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>doFlexDate</command>
+		 <locator><![CDATA[ <datefield>]]></locator>
+		  <args><![CDATA[ <dateAstext>]]></args>
+		  <display>do Flex Date</display>
+		  <help>
+		    <helpString><![CDATA[ To set flex datefield value ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+	
+	<command>
+		  <command>getFlexDate</command>
+		 <locator><![CDATA[ <datefield>]]></locator>
+		  <args></args>
+		  <display>Get Flex Date</display>
+		  <help>
+		    <helpString><![CDATA[ To get the value of flex datefield value ]]></helpString>
+		  </help>
+		  <isFlex>true</isFlex>
+	</command>
+</list>
